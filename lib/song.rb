@@ -62,7 +62,7 @@ class Song
 
     new_song = self.new_by_name(song)
     @artist_name = artist
-    song
+    new_song
   end
 
 end
