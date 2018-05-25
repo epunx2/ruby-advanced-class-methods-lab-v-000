@@ -55,7 +55,7 @@ class Song
   end
 
   def self.new_from_filename(name)
-    name = name.chomp(\.\w+$)
+    name = name.chomp(/\.\w+$/)
     artist = name[/^\w+\b/]
     song = name.chomp(/^\w+\b/)
 
