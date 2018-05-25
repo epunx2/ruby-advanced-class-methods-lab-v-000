@@ -58,6 +58,7 @@ class Song
     name.slice!(/\.\w+$/)
     artist = name[/^\w+\b/]
     name.slice!(/^\w+\b/)
+    name.slice!(/( - )/)
     song = name
 
     new_song = self.new_by_name(song)
