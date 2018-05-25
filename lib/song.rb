@@ -67,7 +67,16 @@ class Song
   end
 
   def self.create_from_filename(name)
+    name.slice!(/\.\w+$/)
+    artist = name[/^\w+\b/]
+    name.slice!(/^\w+\b/)
+    name.slice!(/( - )/)
+    song = name
 
+    new_song = self.new_by_name(song)
+    new_song.artist_name = artist
+    save
+    new_song
   end
 
 end
