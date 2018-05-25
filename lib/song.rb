@@ -75,7 +75,7 @@ class Song
 
     new_song = self.new_by_name(song)
     new_song.artist_name = artist
-    self.class.save
+    new_song.save
     new_song
   end
 
