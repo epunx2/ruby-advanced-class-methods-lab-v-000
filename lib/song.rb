@@ -57,7 +57,7 @@ class Song
   def self.new_from_filename(name)
     name.slice!(/\.\w+$/)
     artist = name[/^\w+\b/]
-    name.slice(/^\w+\b/)
+    name.slice!(/^\w+\b/)
     song = name
 
     new_song = self.new_by_name(song)
